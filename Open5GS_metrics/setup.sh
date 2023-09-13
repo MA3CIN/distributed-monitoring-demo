@@ -15,3 +15,8 @@ helm install -f helm-prometheus-scrape-config.yaml prometheus prometheus-communi
 
 # Uninstall chart
 # helm uninstall prometheus
+
+
+# Port forward prometheus
+export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=prometheus,app.kubernetes.io/instance=prometheus" -o jsonpath="{.items[0].metadata.name}")
+kubectl --namespace default port-forward $POD_NAME 9090
