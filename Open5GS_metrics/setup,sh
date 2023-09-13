@@ -1,6 +1,0 @@
-# Helm Open5GS
-helm repo add openverso https://gradiant.github.io/openverso-charts/
-helm install openverso/open5gs
-
-# Prometheus operator
-kubectl create -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml
