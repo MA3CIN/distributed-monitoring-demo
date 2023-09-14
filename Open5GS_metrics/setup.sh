@@ -1,6 +1,10 @@
 # Helm Open5GS
 helm repo add openverso https://gradiant.github.io/openverso-charts/
-helm -f open5gs-values.yaml install openverso/open5gs
+helm install --values open5gs-enable-metrics.yaml open5gs openverso/open5gs
+
+
+# debug install
+# helm install --values open5gs-enable-metrics.yaml open5gs openverso/open5gs --debug --dry-run
 
 # Prometheus operator
 # kubectl create -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/bundle.yaml
@@ -11,12 +15,11 @@ helm -f open5gs-values.yaml install openverso/open5gs
 
 # Prometheus operator, the Helm way
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install prometheus prometheus-community/prometheus
+helm install prometheus prometheus-community/kube-prometheus-stack 
 # helm install -f helm-prometheus-scrape-config.yaml prometheus prometheus-community/prometheus
 
-# Port forward prometheus
-export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=prometheus,app.kubernetes.io/instance=prometheus" -o jsonpath="{.items[0].metadata.name}")
-kubectl --namespace default port-forward $POD_NAME 9090
+# Port forward prometheus svc
+kubectl port-forward svc/prometheus-operated 9090:9090
 
 # Uninstall chart
 # helm uninstall prometheus
