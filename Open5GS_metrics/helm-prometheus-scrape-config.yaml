@@ -694,34 +694,34 @@ serverFiles:
 
 # These 4 NFs will be changed to label based k8s discovery
 
-    scrape_configs:
-      - job_name: open5gs-amfd
-        scheme: http
-        scrape_interval: 1s
-        static_configs:
-          - targets:
-            - 10.244.0.15:9090
+    # scrape_configs:
+    #   - job_name: open5gs-amfd
+    #     scheme: http
+    #     scrape_interval: 1s
+    #     static_configs:
+    #       - targets:
+    #         - 10.244.0.15:9090
       
-      - job_name: open5gs-smfd
-        scheme: http
-        scrape_interval: 1s
-        static_configs:
-          - targets:
-            - 10.244.0.17:9090
+    #   - job_name: open5gs-smfd
+    #     scheme: http
+    #     scrape_interval: 1s
+    #     static_configs:
+    #       - targets:
+    #         - 10.244.0.17:9090
 
-      - job_name: open5gs-upf
-        scheme: http
-        scrape_interval: 1s
-        static_configs:
-          - targets:
-            - 10.244.0.20:9090
+    #   - job_name: open5gs-upf
+    #     scheme: http
+    #     scrape_interval: 1s
+    #     static_configs:
+    #       - targets:
+    #         - 10.244.0.20:9090
 
-      - job_name: open5gs-pcf
-        scheme: http
-        scrape_interval: 1s
-        static_configs:
-          - targets:
-            - 10.244.0.16:9090
+    #   - job_name: open5gs-pcf
+    #     scheme: http
+    #     scrape_interval: 1s
+    #     static_configs:
+    #       - targets:
+    #         - 10.244.0.16:9090
       
       - job_name: prometheus
         static_configs:
