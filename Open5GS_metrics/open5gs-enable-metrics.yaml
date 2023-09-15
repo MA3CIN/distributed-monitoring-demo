@@ -3,21 +3,25 @@ amf:
     enabled: true
     serviceMonitor:
       enabled: true
+      additionalLabels: {release: prometheus}
 
 pcf:
   metrics:
     enabled: true
     serviceMonitor:
       enabled: true
+      additionalLabels: {release: prometheus}
 
 upf:
   metrics:
     enabled: true
     serviceMonitor:
       enabled: true
+      additionalLabels: {release: prometheus}
 
 smf:
   metrics:
     enabled: true
     serviceMonitor:
       enabled: true
+      additionalLabels: {release: prometheus}
