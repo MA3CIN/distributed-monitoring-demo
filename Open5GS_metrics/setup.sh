@@ -8,7 +8,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack
 
 # Helm Open5GS
 helm repo add openverso https://gradiant.github.io/openverso-charts/
-helm install --values open5gs-enable-metrics.yaml open5gs openverso/open5gs
+helm install --version 2.1.0 --values open5gs-enable-metrics.yaml open5gs openverso/open5gs
 
 # Display localhost Grafana user and pass
 kubectl get secret prometheus-grafana -o jsonpath='{.data.admin-user}' | base64 --decode
