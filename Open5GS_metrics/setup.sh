@@ -18,10 +18,10 @@ kubectl get secret prometheus-grafana -o jsonpath='{.data.admin-password}' | bas
 # kubectl wait --for=condition=ready pod -l app.kubernetes.io/instance=prometheus-kube-prometheus-prometheus --timeout=60s  
 # kubectl port-forward svc/prometheus-operated 9090:9090
 
-kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=grafana --timeout=60s  
-kubectl port-forward svc/prometheus-grafana 8080:80
+# kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=grafana --timeout=60s  
+# kubectl port-forward svc/prometheus-grafana 8080:80
 
-xdg-open http://localhost:8080
+# xdg-open http://localhost:8080
 
 # debug install
 # helm install --values open5gs-enable-metrics.yaml open5gs openverso/open5gs --debug --dry-run > output.txt
