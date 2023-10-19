@@ -4,7 +4,6 @@ kind create cluster
 # Prometheus operator, the Helm way
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus prometheus-community/kube-prometheus-stack 
-# helm install -f helm-prometheus-scrape-config.yaml prometheus prometheus-community/prometheus
 
 # Helm Open5GS
 helm repo add openverso https://gradiant.github.io/openverso-charts/
