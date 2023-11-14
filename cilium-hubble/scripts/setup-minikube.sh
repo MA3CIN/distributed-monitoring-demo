@@ -1,0 +1,1 @@
+minikube start --network-plugin=cni --cni=false
