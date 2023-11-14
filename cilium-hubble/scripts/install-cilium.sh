@@ -8,5 +8,5 @@ sudo tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz /usr/local/bin
 rm cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
 
 #Install cilium on the cluster and verify it
-#cilium install --version 1.14.4
+cilium install --version 1.14.4
 cilium status --wait
