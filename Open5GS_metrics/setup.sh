@@ -27,6 +27,8 @@ kubectl get secret prometheus-grafana -o jsonpath='{.data.admin-password}' | bas
 
 
 ### DO S141 ZAZI:
+# apply storage-class.yaml
+
 # do PVC, po pv robisz edit pvc......:
 # spec:
 #  storageClassName: manual
@@ -35,3 +37,7 @@ kubectl get secret prometheus-grafana -o jsonpath='{.data.admin-password}' | bas
 # kubectl apply -f pv.yaml
 
 # ewentualnie usun mongo poda i tyle
+
+
+
+# https://github.com/s5uishida/simple_measurement_of_upf_performance?tab=readme-ov-file#measure tutaj PacketRusher
