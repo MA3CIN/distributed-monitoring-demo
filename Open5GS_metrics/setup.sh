@@ -24,3 +24,14 @@ kubectl get secret prometheus-grafana -o jsonpath='{.data.admin-password}' | bas
 
 # debug install
 # helm install --values open5gs-enable-metrics.yaml open5gs openverso/open5gs --debug --dry-run > output.txt
+
+
+### DO S141 ZAZI:
+# do PVC, po pv robisz edit pvc......:
+# spec:
+#  storageClassName: manual
+
+#a do PV
+# kubectl apply -f pv.yaml
+
+# ewentualnie usun mongo poda i tyle
